@@ -7,7 +7,19 @@ interface SwitchProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(
-  ({ className, checked, onCheckedChange, ...props }, ref) => {
+  ({ className, checked: controlledChecked, onCheckedChange, ...props }, ref) => {
+    const [internalChecked, setInternalChecked] = React.useState(props.defaultChecked ?? false)
+    const isControlled = controlledChecked !== undefined
+    const checked = isControlled ? controlledChecked : internalChecked
+
+    const handleClick = () => {
+        const newValue = !checked
+        if (!isControlled) {
+            setInternalChecked(newValue)
+        }
+        onCheckedChange?.(newValue)
+    }
+
     return (
       <button
         type="button"
@@ -15,19 +27,19 @@ const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(
         aria-checked={checked}
         data-state={checked ? "checked" : "unchecked"}
         className={cn(
-          "peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50",
-          checked ? "bg-[#16DBCC]" : "bg-gray-200",
+          "peer inline-flex h-7 w-14 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50",
+          checked ? "bg-[#16DBCC]" : "bg-[#DFEAF2]",
           className
         )}
-        onClick={() => onCheckedChange?.(!checked)}
+        onClick={handleClick}
         ref={ref}
         {...props}
       >
         <span
           data-state={checked ? "checked" : "unchecked"}
           className={cn(
-            "pointer-events-none block h-5 w-5 rounded-full bg-white shadow-lg ring-0 transition-transform",
-            checked ? "translate-x-5" : "translate-x-0"
+            "pointer-events-none block h-6 w-6 rounded-full bg-white shadow-lg ring-0 transition-transform",
+            checked ? "translate-x-7" : "translate-x-0.5"
           )}
         />
       </button>

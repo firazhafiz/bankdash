@@ -34,7 +34,7 @@ export function DonutChart() {
         {/* Center Text (Optional based on design, design shows concentric rings maybe, simplified to simple donut for now) */}
       </div>
 
-      <div className="mt-4 flex flex-wrap justify-center gap-6">
+      <div className="mt-4 px-4 flex flex-wrap justify-center gap-6">
         {data.map((entry) => (
           <div key={entry.name} className="flex items-center gap-2">
             <div 
