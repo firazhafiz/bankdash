@@ -1,17 +1,15 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { MainLayout } from './components/layout/MainLayout'
-import CreditCards from './pages/CreditCards'
-import Services from './pages/Services'
-import Settings from './pages/Settings'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { MainLayout } from "./components/layout/MainLayout";
+import CreditCards from "./pages/CreditCards";
+import Services from "./pages/Services";
+import Settings from "./pages/Settings";
 
-// Placeholder Pages
-const Dashboard = () => <div className="text-xl font-semibold">Dashboard Content Placeholder</div>
-const Transactions = () => <div className="text-xl font-semibold">Transactions Content Placeholder</div>
-const Accounts = () => <div className="text-xl font-semibold">Accounts Content Placeholder</div>
-const Investments = () => <div className="text-xl font-semibold">Investments Content Placeholder</div>
-const Loans = () => <div className="text-xl font-semibold">Loans Content Placeholder</div>
-const MyPrivileges = () => <div className="text-xl font-semibold">My Privileges Content Placeholder</div>
-
+import Dashboard from "./pages/Dashboard";
+import Transactions from "./pages/Transactions";
+import Accounts from "./pages/Accounts";
+import Investments from "./pages/Investments";
+import Loans from "./pages/Loans";
+import MyPrivileges from "./pages/MyPrivileges";
 
 function App() {
   return (
@@ -30,7 +28,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;
