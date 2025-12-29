@@ -1,6 +1,5 @@
 import { loansData } from "../data/dashboardData";
 import { User, Briefcase, Building2, Wrench } from "lucide-react";
-import { cn } from "../lib/utils";
 
 const iconMap: Record<string, any> = {
   user: User,
