@@ -82,39 +82,7 @@ export default function Settings() {
 
         <TabsContent value="preferences">
            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[30px] gap-y-6 mt-8">
-              <div className="space-y-6">
-                 <div className="flex items-center justify-between">
-                    <div>
-                       <p className="text-base font-medium text-[#232323]">Digital Currency</p>
-                       <p className="text-sm text-[#718EBF]">Enable digital currency functionality</p>
-                    </div>
-                    <Switch defaultChecked />
-                 </div>
-                 <div className="flex items-center justify-between">
-                    <div>
-                       <p className="text-base font-medium text-[#232323]">Merchant Order</p>
-                       <p className="text-sm text-[#718EBF]">Receive merchant order updates</p>
-                    </div>
-                    <Switch defaultChecked />
-                 </div>
-                 <div className="flex items-center justify-between">
-                    <div>
-                       <p className="text-base font-medium text-[#232323]">Recommendations</p>
-                       <p className="text-sm text-[#718EBF]">Receive recommendations</p>
-                    </div>
-                    <Switch defaultChecked />
-                 </div>
-              </div>
-
-               <div className="space-y-6">
-                 <div className="flex items-center justify-between">
-                    <div>
-                       <p className="text-base font-medium text-[#232323]">Two-factor Authentication</p>
-                       <p className="text-sm text-[#718EBF]">Enable or disable 2FA</p>
-                    </div>
-                    <Switch defaultChecked />
-                 </div>
-                 {/* Currency and Timezone Selects */}
+               {/* Currency & Time Zone - Top Row */}
                  <div className="space-y-3">
                     <label className="text-base font-medium text-[#232323]">Currency</label>
                     <Select options={[{value: "usd", label: "USD"}]} placeholder="USD" />
@@ -123,10 +91,35 @@ export default function Settings() {
                     <label className="text-base font-medium text-[#232323]">Time Zone</label>
                     <Select options={[{value: "pst", label: "(GMT-12:00) International Date Line West"}]} placeholder="(GMT-12:00) International Date Line West" />
                  </div>
-              </div>
+
+               {/* Notifications Section */}
+               <div className="md:col-span-2 space-y-4 mt-2">
+                 <h3 className="text-base font-medium text-[#343C6A] mb-4">Notification</h3>
+                 
+                 <div className="flex items-center gap-4">
+                    <Switch defaultChecked className="data-[state=checked]:bg-[#16DBCC]" />
+                    <div>
+                       <p className="text-base text-[#232323] font-normal">I send or receive digita currency</p>
+                    </div>
+                 </div>
+                 
+                 <div className="flex items-center gap-4">
+                    <Switch className="data-[state=checked]:bg-[#16DBCC]" />
+                    <div>
+                       <p className="text-base text-[#232323] font-normal">I receive merchant order</p>
+                    </div>
+                 </div>
+                 
+                 <div className="flex items-center gap-4">
+                    <Switch defaultChecked className="data-[state=checked]:bg-[#16DBCC]" />
+                    <div>
+                       <p className="text-base text-[#232323] font-normal">There are recommendation for my account</p>
+                    </div>
+                 </div>
+               </div>
 
                <div className="md:col-span-2 flex justify-end mt-4">
-                  <Button type="submit" className="w-[190px]  text-lg rounded-xl">Save</Button>
+                  <Button type="submit" className="w-[190px] h-[50px] text-[18px] rounded-[15px]">Save</Button>
                </div>
            </div>
         </TabsContent>

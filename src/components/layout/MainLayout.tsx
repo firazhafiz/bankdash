@@ -37,13 +37,13 @@ export function MainLayout() {
       {/* Sidebar */}
       <Sidebar 
         className={cn(
-          "fixed inset-y-0 left-0 z-50 transform transition-transform duration-200 lg:translate-x-0 lg:static border-r border-[#E6EFF5]",
+          "fixed inset-y-0 left-0 z-50 transform transition-transform duration-200 lg:translate-x-0 border-r border-[#E6EFF5]",
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         )} 
       />
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col min-w-0">
+      <div className="flex-1 flex flex-col min-w-0 lg:ml-[250px]">
         <TopHeader 
           title={getPageTitle(location.pathname)} 
           onMenuClick={() => setSidebarOpen(true)} 
