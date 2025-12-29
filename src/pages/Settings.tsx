@@ -1,0 +1,161 @@
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs"
+import { Input } from "../components/ui/input"
+import { Button } from "../components/ui/button"
+import { Switch } from "../components/ui/switch"
+import { Select } from "../components/ui/select"
+import { Pencil } from "lucide-react"
+
+export default function Settings() {
+  return (
+    <div className="bg-white rounded-[25px] p-[30px] min-h-[600px]">
+      <Tabs defaultValue="edit-profile">
+        <TabsList>
+          <TabsTrigger value="edit-profile">Edit Profile</TabsTrigger>
+          <TabsTrigger value="preferences">Preferences</TabsTrigger>
+          <TabsTrigger value="security">Security</TabsTrigger>
+        </TabsList>
+
+        <TabsContent value="edit-profile">
+          <div className="flex flex-col md:flex-row gap-[50px] mt-[40px]">
+            {/* Profile Picture */}
+            <div className="flex flex-col items-center gap-4">
+               <div className="relative">
+                  <img src="/images/firaz-linkedin.jpg" alt="Profile" className="h-[130px] w-[130px] rounded-full object-cover" />
+                  <button className="absolute bottom-1 right-1 bg-[#1814F3] h-[30px] w-[30px] rounded-full flex items-center justify-center text-white">
+                     <Pencil className="h-4 w-4" />
+                  </button>
+               </div>
+            </div>
+
+            {/* Form */}
+            <form className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-x-[30px] gap-y-5">
+               <div className="space-y-3">
+                 <label className="text-base font-medium text-[#232323]">Your Name</label>
+                 <Input placeholder="Charlene Reed" defaultValue="Charlene Reed" />
+               </div>
+               <div className="space-y-3">
+                 <label className="text-base font-medium text-[#232323]">User Name</label>
+                 <Input placeholder="Charlene Reed" defaultValue="Charlene Reed" />
+               </div>
+               <div className="space-y-3">
+                 <label className="text-base font-medium text-[#232323]">Email</label>
+                 <Input placeholder="charlenereed@gmail.com" defaultValue="charlenereed@gmail.com" />
+               </div>
+               <div className="space-y-3">
+                 <label className="text-base font-medium text-[#232323]">Password</label>
+                 <Input placeholder="**********" type="password" />
+               </div>
+               <div className="space-y-3">
+                 <label className="text-base font-medium text-[#232323]">Date of Birth</label>
+                 <Select 
+                   options={[{ value: "25 Jan 1990", label: "25 January 1990" }]} 
+                   placeholder="25 January 1990"
+                 />
+               </div>
+               <div className="space-y-3">
+                 <label className="text-base font-medium text-[#232323]">Present Address</label>
+                 <Input placeholder="San Jose, California, USA" defaultValue="San Jose, California, USA" />
+               </div>
+               <div className="space-y-3">
+                 <label className="text-base font-medium text-[#232323]">Permanent Address</label>
+                 <Input placeholder="San Jose, California, USA" defaultValue="San Jose, California, USA" />
+               </div>
+               <div className="space-y-3">
+                 <label className="text-base font-medium text-[#232323]">City</label>
+                 <Input placeholder="San Jose" defaultValue="San Jose" />
+               </div>
+               <div className="space-y-3">
+                 <label className="text-base font-medium text-[#232323]">Postal Code</label>
+                 <Input placeholder="45962" defaultValue="45962" />
+               </div>
+               <div className="space-y-3">
+                 <label className="text-base font-medium text-[#232323]">Country</label>
+                 <Input placeholder="USA" defaultValue="USA" />
+               </div>
+
+               <div className="md:col-span-2 flex justify-end mt-4">
+                  <Button type="submit" className="w-[190px]  text-lg rounded-xl">Save</Button>
+               </div>
+            </form>
+          </div>
+        </TabsContent>
+
+        <TabsContent value="preferences">
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[30px] gap-y-6 mt-8">
+              <div className="space-y-6">
+                 <div className="flex items-center justify-between">
+                    <div>
+                       <p className="text-base font-medium text-[#232323]">Digital Currency</p>
+                       <p className="text-sm text-[#718EBF]">Enable digital currency functionality</p>
+                    </div>
+                    <Switch defaultChecked />
+                 </div>
+                 <div className="flex items-center justify-between">
+                    <div>
+                       <p className="text-base font-medium text-[#232323]">Merchant Order</p>
+                       <p className="text-sm text-[#718EBF]">Receive merchant order updates</p>
+                    </div>
+                    <Switch defaultChecked />
+                 </div>
+                 <div className="flex items-center justify-between">
+                    <div>
+                       <p className="text-base font-medium text-[#232323]">Recommendations</p>
+                       <p className="text-sm text-[#718EBF]">Receive recommendations</p>
+                    </div>
+                    <Switch defaultChecked />
+                 </div>
+              </div>
+
+               <div className="space-y-6">
+                 <div className="flex items-center justify-between">
+                    <div>
+                       <p className="text-base font-medium text-[#232323]">Two-factor Authentication</p>
+                       <p className="text-sm text-[#718EBF]">Enable or disable 2FA</p>
+                    </div>
+                    <Switch defaultChecked />
+                 </div>
+                 {/* Currency and Timezone Selects */}
+                 <div className="space-y-3">
+                    <label className="text-base font-medium text-[#232323]">Currency</label>
+                    <Select options={[{value: "usd", label: "USD"}]} placeholder="USD" />
+                 </div>
+                 <div className="space-y-3">
+                    <label className="text-base font-medium text-[#232323]">Time Zone</label>
+                    <Select options={[{value: "pst", label: "(GMT-12:00) International Date Line West"}]} placeholder="(GMT-12:00) International Date Line West" />
+                 </div>
+              </div>
+
+               <div className="md:col-span-2 flex justify-end mt-4">
+                  <Button type="submit" className="w-[190px]  text-lg rounded-xl">Save</Button>
+               </div>
+           </div>
+        </TabsContent>
+
+        <TabsContent value="security">
+           <div className="mt-8 space-y-8">
+              <h3 className="text-[18px] font-medium text-[#343C6A]">Two-factor Authentication</h3>
+              <div className="flex items-center gap-6">
+                 <Switch defaultChecked />
+                 <p className="text-base text-[#232323]">Enable or disable two factor authentication</p>
+              </div>
+
+              <h3 className="text-[18px] font-medium text-[#343C6A]">Change Password</h3>
+              <form className="space-y-5">
+                 <div className="space-y-3 max-w-md">
+                   <label className="text-base font-medium text-[#232323]">Current Password</label>
+                   <Input placeholder="**********" type="password" />
+                 </div>
+                 <div className="space-y-3 max-w-md">
+                   <label className="text-base font-medium text-[#232323]">New Password</label>
+                   <Input placeholder="**********" type="password" />
+                 </div>
+                  <div className="flex justify-end mt-6">
+                    <Button type="submit" className="w-[190px]  text-lg rounded-xl">Save</Button>
+                  </div>
+              </form>
+           </div>
+        </TabsContent>
+      </Tabs>
+    </div>
+  )
+}
