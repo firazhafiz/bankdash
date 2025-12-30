@@ -2,12 +2,6 @@ import { CreditCard } from "../components/ui/CreditCard";
 import { DonutChart } from "../components/ui/DonutChart";
 import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
-import {
-  Shield,
-  Lock,
-  Smartphone,
-  CreditCard as CreditCardIcon,
-} from "lucide-react";
 
 // Mock Data
 const cardList = [
@@ -18,59 +12,59 @@ const cardList = [
     name: "William",
     iconBg: "#E7EDFF",
     iconColor: "#1814F3",
-    icon: "credit-card",
+    icon: "/assets/type1.svg",
   },
   {
     type: "Secondary",
     bank: "BRC Bank",
     number: "**** **** 4300",
     name: "Michel",
-    iconBg: "#FFF5D9",
+    iconBg: "#FFE0EB",
     iconColor: "#FFBB38",
-    icon: "credit-card",
+    icon: "/assets/type2.svg",
   },
   {
     type: "Secondary",
     bank: "ABM Bank",
     number: "**** **** 7560",
     name: "Edward",
-    iconBg: "#FFE0EB",
+    iconBg: "#FFF5D9",
     iconColor: "#FF82AC",
-    icon: "credit-card",
+    icon: "/assets/type3.svg",
   },
 ];
 
 const cardSettings = [
   {
-    icon: Shield,
+    icon: "/assets/block-card.svg",
     label: "Block Card",
     desc: "Instantly block your card",
     bg: "#FFF5D9",
     color: "#FFBB38",
   },
   {
-    icon: Lock,
+    icon: "/assets/pin-code.svg",
     label: "Change Pin Code",
     desc: "Withdraw without any card",
     bg: "#E7EDFF",
     color: "#1814F3",
   },
   {
-    icon: Smartphone,
+    icon: "/assets/google.svg",
     label: "Add to Google Pay",
     desc: "Withdraw without any card",
     bg: "#FFE0EB",
     color: "#FF82AC",
   },
   {
-    icon: Smartphone,
+    icon: "/assets/apple.svg",
     label: "Add to Apple Pay",
     desc: "Withdraw without any card",
     bg: "#DCFAF8",
     color: "#16DBCC",
   },
   {
-    icon: Smartphone,
+    icon: "/assets/apple.svg",
     label: "Add to Apple Store",
     desc: "Withdraw without any card",
     bg: "#DCFAF8",
@@ -151,10 +145,7 @@ export default function CreditCards() {
                     className="flex h-[50px] w-[50px] shrink-0 items-center justify-center rounded-[12px]"
                     style={{ backgroundColor: card.iconBg }}
                   >
-                    <CreditCardIcon
-                      className="h-6 w-6"
-                      style={{ color: card.iconColor }}
-                    />
+                    <img src={card.icon} alt="Card Type" className="h-6 w-6" />
                   </div>
 
                   {/* Card Type */}
@@ -262,10 +253,7 @@ export default function CreditCards() {
                   className="flex h-[50px] w-[50px] items-center justify-center rounded-[15px]"
                   style={{ backgroundColor: item.bg }}
                 >
-                  <item.icon
-                    className="h-6 w-6"
-                    style={{ color: item.color }}
-                  />
+                  <img src={item.icon} alt={item.label} className="h-6 w-6" />
                 </div>
                 <div>
                   <p className="text-base text-[#232323] font-medium">

@@ -1,7 +1,5 @@
-import type { LucideIcon } from "lucide-react";
-
 interface ServiceCardProps {
-  icon: LucideIcon;
+  icon: string;
   title: string;
   subtitle: string;
   iconBgInfo: {
@@ -11,7 +9,7 @@ interface ServiceCardProps {
 }
 
 export function ServiceCard({
-  icon: Icon,
+  icon,
   title,
   subtitle,
   iconBgInfo,
@@ -22,7 +20,7 @@ export function ServiceCard({
         className="flex h-[70px] w-[70px] items-center justify-center rounded-full shrink-0"
         style={{ backgroundColor: iconBgInfo.bg, color: iconBgInfo.color }}
       >
-        <Icon className="h-8 w-8" />
+        <img src={icon} alt={title} className="h-8 w-8" />
       </div>
       <div>
         <h3 className="text-xl font-semibold text-[#232323] mb-1">{title}</h3>

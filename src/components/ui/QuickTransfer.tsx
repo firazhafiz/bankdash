@@ -51,8 +51,8 @@ export function QuickTransfer() {
             onChange={(e) => setAmount(e.target.value)}
             className="bg-transparent border-none shadow-none h-full text-[#718EBF] font-medium pl-6 focus-visible:ring-0"
           />
-          <Button className="h-full rounded-[50px] px-8 bg-[#1814F3] hover:bg-[#0A06F4] flex items-center gap-2 absolute right-0 top-0 bottom-0">
-            Send <Send className="h-4 w-4 -rotate-45" />
+          <Button className="h-full rounded-[50px] px-6 bg-[#1814F3] hover:bg-[#0A06F4] flex items-center gap-2 absolute right-0 top-0 bottom-0 shadow-lg shadow-indigo-500/30">
+            Send <Send className="h-5 w-5" />
           </Button>
         </div>
       </div>

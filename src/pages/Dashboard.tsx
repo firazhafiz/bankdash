@@ -55,11 +55,11 @@ export default function Dashboard() {
       </div>
 
       {/* Middle Row: Weekly Activity & Expense Statistics */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-[30px]">
+      <div className="grid grid-cols-1 lg:grid-cols-3 pb-20 gap-12 md:gap-[30px]">
         <div className="lg:col-span-2">
           <WeeklyActivityChart />
         </div>
-        <div className="bg-white rounded-[25px] p-6 h-[250px] md:h-[322px] flex flex-col">
+        <div className="bg-white rounded-[25px] p-6 h-[450px] md:h-[322px] flex flex-col">
           <h2 className="text-[22px] font-semibold text-[#343C6A] mb-4 text-left">
             Expense Statistics
           </h2>
@@ -70,7 +70,7 @@ export default function Dashboard() {
       </div>
 
       {/* Bottom Row: Quick Transfer & Balance History */}
-      <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-6 md:gap-[30px]">
+      <div className="grid pr-0 md:pr-7 grid-cols-1 lg:grid-cols-[40%_60%] gap-6 md:gap-[30px]">
         <div>
           <QuickTransfer />
         </div>

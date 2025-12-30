@@ -1,24 +1,23 @@
 import { ServiceCard } from "../components/ui/ServiceCard";
-import { Shield, ShoppingBag, PieChart, User, Landmark } from "lucide-react";
 
 // Specific top cards from design
 const topServices = [
   {
-    icon: Shield,
+    icon: "/assets/life.svg",
     title: "Life Insurance",
     subtitle: "Unlimited protection",
     bg: "#E7EDFF",
     color: "#1814F3",
   },
   {
-    icon: ShoppingBag,
+    icon: "/assets/shopping.svg",
     title: "Shopping",
     subtitle: "Buy. Think. Grow.",
     bg: "#FFF5D9",
     color: "#FFBB38",
   },
   {
-    icon: Shield,
+    icon: "/assets/safety.svg",
     title: "Safety",
     subtitle: "We are your allies",
     bg: "#DCFAF8",
@@ -29,42 +28,42 @@ const topServices = [
 // Detailed list matching the image
 const serviceList = [
   {
-    icon: PieChart,
+    icon: "/assets/business.svg",
     title: "Business loans",
     subtitle: "It is a long established",
     bg: "#FFE0EB",
     color: "#FF82AC",
   },
   {
-    icon: Landmark,
+    icon: "/assets/checking.svg",
     title: "Checking accounts",
     subtitle: "It is a long established",
     bg: "#FFF5D9",
     color: "#FFBB38",
   },
   {
-    icon: PieChart,
+    icon: "/assets/savings.svg",
     title: "Savings accounts",
     subtitle: "It is a long established",
     bg: "#FFE0EB",
     color: "#FF82AC",
   },
   {
-    icon: User,
+    icon: "/assets/debit.svg",
     title: "Debit and credit cards",
     subtitle: "It is a long established",
     bg: "#E7EDFF",
     color: "#1814F3",
   },
   {
-    icon: Shield,
+    icon: "/assets/life.svg",
     title: "Life Insurance",
     subtitle: "It is a long established",
     bg: "#DCFAF8",
     color: "#16DBCC",
   },
   {
-    icon: PieChart,
+    icon: "/assets/business.svg",
     title: "Business loans",
     subtitle: "It is a long established",
     bg: "#FFE0EB",
@@ -107,10 +106,7 @@ export default function Services() {
                   className="flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-[20px]"
                   style={{ backgroundColor: item.bg }}
                 >
-                  <item.icon
-                    className="h-7 w-7"
-                    style={{ color: item.color }}
-                  />
+                  <img src={item.icon} alt={item.title} className="h-7 w-7" />
                 </div>
                 <div>
                   <p className="text-base font-semibold text-[#232323]">

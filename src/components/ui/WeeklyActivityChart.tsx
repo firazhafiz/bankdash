@@ -2,6 +2,7 @@ import {
   BarChart,
   Bar,
   XAxis,
+  YAxis,
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
@@ -22,7 +23,7 @@ export function WeeklyActivityChart() {
             top: 10,
             right: 10,
             left: -20,
-            bottom: 0,
+            bottom: 10,
           }}
           barGap={12}
         >
@@ -35,8 +36,14 @@ export function WeeklyActivityChart() {
             dataKey="day"
             axisLine={false}
             tickLine={false}
-            tick={{ fill: "#718EBF", fontSize: 12 }}
-            dy={10}
+            tick={{ fill: "#718EBF", fontSize: 13 }}
+            dy={15}
+          />
+          <YAxis
+            axisLine={false}
+            tickLine={false}
+            tick={{ fill: "#718EBF", fontSize: 13 }}
+            tickCount={6}
           />
           <Tooltip
             cursor={{ fill: "transparent" }}
