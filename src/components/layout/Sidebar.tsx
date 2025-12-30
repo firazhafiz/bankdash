@@ -12,8 +12,6 @@ import {
 } from "lucide-react";
 import { cn } from "../../lib/utils";
 
-const textLogo = "BankDash.";
-
 const menuItems = [
   { icon: LayoutGrid, label: "Dashboard", path: "/" },
   { icon: ReceiptText, label: "Transactions", path: "/transactions" },
