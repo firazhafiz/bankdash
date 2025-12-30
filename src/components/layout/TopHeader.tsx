@@ -1,4 +1,4 @@
-import { Search, Settings, Bell, Menu } from "lucide-react";
+import { Search, Settings, Menu } from "lucide-react";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 
