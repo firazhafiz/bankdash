@@ -52,6 +52,7 @@ export function MainLayout() {
           "fixed inset-y-0 left-0 z-50 transform transition-transform duration-200 lg:translate-x-0 border-r border-[#E6EFF5]",
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         )}
+        onClose={() => setSidebarOpen(false)}
       />
 
       {/* Main Content */}

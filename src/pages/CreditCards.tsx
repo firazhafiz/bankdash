@@ -138,16 +138,17 @@ export default function CreditCards() {
           <h2 className="text-[22px] font-semibold text-[#343C6A] mb-5">
             Card List
           </h2>
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-4">
             {cardList.map((card, index) => (
               <div
                 key={index}
-                className="grid grid-cols-2 md:grid-cols-5 items-center gap-4 bg-white px-6 py-4 rounded-[20px]"
+                className="flex items-center justify-between bg-white px-6 py-4 rounded-[20px]"
               >
-                {/* Kolom 1: Icon & Card Type */}
-                <div className="flex items-center gap-4 min-w-[180px]">
+                {/* Mobile & Desktop: Flex Layout */}
+                <div className="flex items-center gap-4 md:gap-6 flex-1">
+                  {/* Icon */}
                   <div
-                    className="flex h-[50px] w-[50px] shrink-0 items-center justify-center rounded-full"
+                    className="flex h-[50px] w-[50px] shrink-0 items-center justify-center rounded-[12px]"
                     style={{ backgroundColor: card.iconBg }}
                   >
                     <CreditCardIcon
@@ -155,46 +156,41 @@ export default function CreditCards() {
                       style={{ color: card.iconColor }}
                     />
                   </div>
-                  <div>
-                    <p className="text-base text-[#343C6A] font-medium">
+
+                  {/* Card Type */}
+                  <div className="flex flex-col min-w-[80px]">
+                    <p className="text-[#343C6A] text-[16px] font-medium">
                       Card Type
                     </p>
-                    <p className="text-[15px] text-[#718EBF]">{card.type}</p>
+                    <p className="text-[#718EBF] text-[14px]">{card.type}</p>
+                  </div>
+
+                  {/* Bank - Visible on Mobile now */}
+                  <div className="flex flex-col min-w-[80px]">
+                    <p className="text-[#343C6A] text-[16px] font-medium">
+                      Bank
+                    </p>
+                    <p className="text-[#718EBF] text-[14px]">{card.bank}</p>
+                  </div>
+
+                  {/* Additional Columns for Desktop only */}
+                  <div className="hidden md:flex flex-col min-w-[140px]">
+                    <p className="text-[#343C6A] text-[16px] font-medium">
+                      Card Number
+                    </p>
+                    <p className="text-[#718EBF] text-[14px]">{card.number}</p>
+                  </div>
+                  <div className="hidden md:flex flex-col min-w-[100px]">
+                    <p className="text-[#343C6A] text-[16px] font-medium">
+                      Namain Card
+                    </p>
+                    <p className="text-[#718EBF] text-[14px]">{card.name}</p>
                   </div>
                 </div>
 
-                {/* Kolom 2: Bank */}
-                <div className="hidden md:block">
-                  <p className="text-base text-[#343C6A] font-medium">Bank</p>
-                  <p className="text-[15px] text-[#718EBF]">{card.bank}</p>
-                </div>
-
-                {/* Kolom 3: Card Number */}
-                <div className="hidden md:block">
-                  <p className="text-base text-[#343C6A] font-medium">
-                    Card Number
-                  </p>
-                  <p className="text-[15px] text-[#718EBF]">{card.number}</p>
-                </div>
-
-                {/* Kolom 4: Namain Card */}
-                <div className="hidden md:block">
-                  <p className="text-base text-[#343C6A] font-medium">
-                    Namain Card
-                  </p>
-                  <p className="text-[15px] text-[#718EBF]">{card.name}</p>
-                </div>
-
-                {/* Kolom 5: Action Button */}
-                <div className="hidden md:flex justify-end">
-                  <button className="text-[15px] font-medium text-[#1814F3] hover:underline transition-all">
-                    View Details
-                  </button>
-                </div>
-
-                {/* Mobile View Details Button (visible only on small screens) */}
-                <div className="md:hidden flex justify-end">
-                  <button className="text-[13px] font-medium text-[#1814F3]">
+                {/* View Details Button */}
+                <div className="shrink-0 ml-2">
+                  <button className="text-[#1814F3] text-[13px] md:text-[15px] font-medium bg-transparent border-none p-0 whitespace-nowrap">
                     View Details
                   </button>
                 </div>

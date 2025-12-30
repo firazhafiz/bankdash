@@ -12,6 +12,8 @@ import {
 } from "lucide-react";
 import { cn } from "../../lib/utils";
 
+const textLogo = "BankDash.";
+
 const menuItems = [
   { icon: LayoutGrid, label: "Dashboard", path: "/" },
   { icon: ReceiptText, label: "Transactions", path: "/transactions" },
@@ -24,7 +26,13 @@ const menuItems = [
   { icon: Settings, label: "Setting", path: "/setting" },
 ];
 
-export function Sidebar({ className }: { className?: string }) {
+export function Sidebar({
+  className,
+  onClose,
+}: {
+  className?: string;
+  onClose?: () => void;
+}) {
   const location = useLocation();
 
   return (
@@ -45,6 +53,7 @@ export function Sidebar({ className }: { className?: string }) {
             <Link
               key={item.path}
               to={item.path}
+              onClick={onClose}
               className={cn(
                 "relative  flex items-center gap-4 px-9 py-4 transition-colors font-medium",
                 isActive
