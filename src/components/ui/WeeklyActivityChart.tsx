@@ -11,7 +11,7 @@ import { weeklyActivityData } from "../../data/dashboardData";
 
 export function WeeklyActivityChart() {
   return (
-    <div className="w-full h-[250px] bg-white rounded-[25px] p-6">
+    <div className="w-full h-[250px] md:h-[322px] bg-white rounded-[25px] p-6">
       <h2 className="text-[22px] font-semibold text-[#343C6A] mb-4 text-left">
         Weekly Activity
       </h2>
@@ -58,14 +58,14 @@ export function WeeklyActivityChart() {
             dataKey="deposit"
             fill="#1814F3"
             barSize={15}
-            radius={[10, 10, 10, 10]}
+            radius={[10, 10, 0, 0]}
           />
           <Bar
             name="Withdraw"
             dataKey="withdraw"
             fill="#16DBCC"
             barSize={15}
-            radius={[10, 10, 10, 10]}
+            radius={[10, 10, 0, 0]}
           />
         </BarChart>
       </ResponsiveContainer>

@@ -1,11 +1,11 @@
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts'
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
 
 const data = [
-  { name: 'DBL Bank', value: 30, color: '#1814F3' },
-  { name: 'BRC Bank', value: 30, color: '#FF82AC' },
-  { name: 'ABM Bank', value: 20, color: '#16DBCC' },
-  { name: 'MCP Bank', value: 20, color: '#FFBB38' },
-]
+  { name: "DBL Bank", value: 30, color: "#1814F3" },
+  { name: "BRC Bank", value: 30, color: "#FF82AC" },
+  { name: "ABM Bank", value: 20, color: "#16DBCC" },
+  { name: "MCP Bank", value: 20, color: "#FFBB38" },
+];
 
 export function DonutChart() {
   return (
@@ -19,10 +19,12 @@ export function DonutChart() {
               cy="50%"
               innerRadius={60}
               outerRadius={100}
-              paddingAngle={0}
+              paddingAngle={2} // Add slight padding between slices
+              startAngle={90}
+              endAngle={-270}
               dataKey="value"
               stroke="none"
-              // cornerRadius={10} 
+              // cornerRadius={10}
             >
               {data.map((entry, index) => (
                 <Cell key={`cell-${index}`} fill={entry.color} />
@@ -37,14 +39,16 @@ export function DonutChart() {
       <div className="mt-4 px-4 flex flex-wrap justify-center gap-6">
         {data.map((entry) => (
           <div key={entry.name} className="flex items-center gap-2">
-            <div 
-              className="h-3 w-3 rounded-full" 
-              style={{ backgroundColor: entry.color }} 
+            <div
+              className="h-3 w-3 rounded-full"
+              style={{ backgroundColor: entry.color }}
             />
-            <span className="text-sm text-[#718EBF] font-medium">{entry.name}</span>
+            <span className="text-sm text-[#718EBF] font-medium">
+              {entry.name}
+            </span>
           </div>
         ))}
       </div>
     </div>
-  )
+  );
 }

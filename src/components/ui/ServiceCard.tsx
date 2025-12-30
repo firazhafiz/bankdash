@@ -1,19 +1,24 @@
-import type { LucideIcon } from "lucide-react"
+import type { LucideIcon } from "lucide-react";
 
 interface ServiceCardProps {
-  icon: LucideIcon
-  title: string
-  subtitle: string
+  icon: LucideIcon;
+  title: string;
+  subtitle: string;
   iconBgInfo: {
-    bg: string
-    color: string
-  }
+    bg: string;
+    color: string;
+  };
 }
 
-export function ServiceCard({ icon: Icon, title, subtitle, iconBgInfo }: ServiceCardProps) {
+export function ServiceCard({
+  icon: Icon,
+  title,
+  subtitle,
+  iconBgInfo,
+}: ServiceCardProps) {
   return (
-    <div className="flex items-center rounded-[25px] bg-white p-6 gap-6 shadow-sm">
-      <div 
+    <div className="flex items-center rounded-[25px] bg-white p-6 gap-6">
+      <div
         className="flex h-[70px] w-[70px] items-center justify-center rounded-full shrink-0"
         style={{ backgroundColor: iconBgInfo.bg, color: iconBgInfo.color }}
       >
@@ -24,5 +29,5 @@ export function ServiceCard({ icon: Icon, title, subtitle, iconBgInfo }: Service
         <p className="text-[#718EBF] text-base">{subtitle}</p>
       </div>
     </div>
-  )
+  );
 }

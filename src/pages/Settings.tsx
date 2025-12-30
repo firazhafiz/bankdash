@@ -42,7 +42,7 @@ export default function Settings() {
             <div className="flex flex-col items-center gap-4">
               <div className="relative">
                 <img
-                  src="/images/firaz-linkedin.jpg"
+                  src="/images/profile.jpg"
                   alt="Profile"
                   className="h-[130px] w-[130px] rounded-full object-cover"
                 />

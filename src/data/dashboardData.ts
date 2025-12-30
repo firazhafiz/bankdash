@@ -51,15 +51,15 @@ export const recentTransactions = [
 ];
 
 export const quickTransferUsers = [
-  { name: "Livia Bator", role: "CEO", image: "/images/firaz-linkedin.jpg" }, // Using existing image for mock
+  { name: "Livia Bator", role: "CEO", image: "/images/profile.jpg" }, // Using existing image for mock
   {
     name: "Randy Press",
     role: "Director",
-    image: "/images/firaz-linkedin.jpg",
+    image: "/images/profile.jpg",
   },
-  { name: "Workman", role: "Designer", image: "/images/firaz-linkedin.jpg" },
-  { name: "Kevin", role: "CEO", image: "/images/firaz-linkedin.jpg" },
-  { name: "Maria", role: "Manager", image: "/images/firaz-linkedin.jpg" },
+  { name: "Workman", role: "Designer", image: "/images/profile.jpg" },
+  { name: "Kevin", role: "CEO", image: "/images/profile.jpg" },
+  { name: "Maria", role: "Manager", image: "/images/profile.jpg" },
 ];
 
 export const accountsData = [

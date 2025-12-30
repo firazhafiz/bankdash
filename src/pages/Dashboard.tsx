@@ -45,8 +45,11 @@ export default function Dashboard() {
 
         {/* Recent Transaction (1/3 width) */}
         <div className="flex flex-col gap-5">
-          <div className="h-[26px]"></div>{" "}
-          {/* Spacer to align with My Cards title */}
+          <div className="flex items-center justify-between">
+            <h2 className="text-[22px] font-semibold text-[#343C6A]">
+              Recent Transaction
+            </h2>
+          </div>
           <RecentTransactionList />
         </div>
       </div>
@@ -56,7 +59,7 @@ export default function Dashboard() {
         <div className="lg:col-span-2">
           <WeeklyActivityChart />
         </div>
-        <div className="bg-white rounded-[25px] p-6 h-[322px] flex flex-col md:h-[250px]">
+        <div className="bg-white rounded-[25px] p-6 h-[250px] md:h-[322px] flex flex-col">
           <h2 className="text-[22px] font-semibold text-[#343C6A] mb-4 text-left">
             Expense Statistics
           </h2>

@@ -11,9 +11,7 @@ const iconMap: Record<string, any> = {
 export function RecentTransactionList() {
   return (
     <div className="w-full bg-white rounded-[25px] p-6 h-[250px] overflow-y-auto custom-scrollbar">
-      <h2 className="text-[22px] font-semibold text-[#343C6A] mb-4 sticky top-0 bg-white">
-        Recent Transaction
-      </h2>
+      {/* Title removed to allow external control */}
       <div className="flex flex-col gap-4">
         {recentTransactions.map((item) => {
           const Icon = iconMap[item.icon] || DollarSign;

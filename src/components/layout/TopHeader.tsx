@@ -55,10 +55,14 @@ export function TopHeader({ title, onMenuClick }: TopHeaderProps) {
             variant="ghost"
             className="rounded-full bg-[#F5F7FA] h-[50px] w-[50px] hover:bg-[#e6eff5] text-[#FE5C73]"
           >
-            <Bell className="h-6 w-6" />
+            <img
+              src="/assets/notif.svg"
+              alt="Notification"
+              className="w-6 h-6"
+            />
           </Button>
           <img
-            src="/images/firaz-linkedin.jpg"
+            src="/images/profile.jpg"
             alt="Profile"
             className="h-[60px] w-[60px] rounded-full object-cover"
           />
@@ -68,7 +72,7 @@ export function TopHeader({ title, onMenuClick }: TopHeaderProps) {
       {/* Mobile Profile (Right) */}
       <div className="lg:hidden flex items-center">
         <img
-          src="/images/firaz-linkedin.jpg"
+          src="/images/profile.jpg"
           alt="Profile"
           className="h-[35px] w-[35px] rounded-full object-cover"
         />

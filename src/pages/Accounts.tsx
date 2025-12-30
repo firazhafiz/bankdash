@@ -38,6 +38,9 @@ export default function Accounts() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-[30px]">
         {/* Recent Transactions (2/3 width) */}
         <div className="lg:col-span-2">
+          <h2 className="text-[22px] font-semibold text-[#343C6A] mb-4">
+            Recent Transaction
+          </h2>
           <RecentTransactionList />
         </div>
 
