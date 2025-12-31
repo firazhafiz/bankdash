@@ -19,18 +19,15 @@ export function TopHeader({ title, onMenuClick }: TopHeaderProps) {
         >
           <Menu className="h-6 w-6 text-[#343C6A]" />
         </Button>
-        {/* Desktop Title */}
         <h1 className="hidden lg:block text-[28px] font-semibold text-[#343C6A]">
           {title}
         </h1>
       </div>
 
-      {/* Mobile Title (Centered) */}
       <div className="lg:hidden absolute left-1/2 -translate-x-1/2">
         <h1 className="text-[20px] font-semibold text-[#343C6A]">{title}</h1>
       </div>
 
-      {/* Desktop Search & Icons */}
       <div className="hidden lg:flex items-center gap-[30px]">
         <div className="relative w-full max-w-[235px]">
           <div className="absolute left-4 top-1/2 -translate-y-1/2 text-[#718EBF]">
@@ -69,7 +66,6 @@ export function TopHeader({ title, onMenuClick }: TopHeaderProps) {
         </div>
       </div>
 
-      {/* Mobile Profile (Right) */}
       <div className="lg:hidden flex items-center">
         <img
           src="/images/profile.jpg"

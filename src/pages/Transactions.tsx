@@ -69,7 +69,6 @@ export default function Transactions() {
         </Tabs>
       </div>
 
-      {/* Table Header (Desktop Only) */}
       <div className="hidden md:grid grid-cols-[1fr_1fr_1fr_1fr_1fr_1fr] gap-4 px-4 py-3 border-b border-[#E6EFF5] text-[#718EBF] font-medium text-[16px]">
         <div>Description</div>
         <div>Transaction ID</div>
@@ -79,14 +78,12 @@ export default function Transactions() {
         <div className="text-right">Amount</div>
       </div>
 
-      {/* Transactions List */}
       <div className="flex flex-col gap-4">
         {allTransactions.map((item, index) => (
           <div
             key={index}
             className="flex flex-col md:grid md:grid-cols-[1fr_1fr_1fr_1fr_1fr_1fr] items-start md:items-center gap-4 px-0 md:px-4 py-3 border-b border-[#E6EFF5] last:border-none"
           >
-            {/* Mobile View: Description + Date */}
             <div className="flex items-center gap-4 md:contents">
               <div className="flex md:hidden h-[50px] w-[50px] items-center justify-center rounded-full bg-[#f5f7fa]">
                 {item.amount > 0 ? (
@@ -120,7 +117,6 @@ export default function Transactions() {
               {item.date}
             </div>
 
-            {/* Status Badge (Desktop) vs Amount (Right Aligned) */}
             <div className="w-full md:w-auto flex justify-between md:block text-right">
               <span
                 className={cn(

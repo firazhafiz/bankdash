@@ -1,6 +1,5 @@
 import { ServiceCard } from "../components/ui/ServiceCard";
 
-// Specific top cards from design
 const topServices = [
   {
     icon: "/assets/life.svg",
@@ -25,7 +24,6 @@ const topServices = [
   },
 ];
 
-// Detailed list matching the image
 const serviceList = [
   {
     icon: "/assets/business.svg",
@@ -74,7 +72,6 @@ const serviceList = [
 export default function Services() {
   return (
     <div className="flex flex-col gap-[30px]">
-      {/* Services Grid */}
       <section>
         <div className="flex gap-4 overflow-x-auto pb-4 -mx-6 px-6 md:grid md:grid-cols-3 md:gap-[30px] md:mx-0 md:px-0 md:pb-0 scrollbar-hide">
           {topServices.map((service, index) => (
@@ -90,7 +87,6 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Bank Services List */}
       <section>
         <h2 className="text-[22px] font-semibold text-[#343C6A] mb-5">
           Bank Services List
@@ -116,7 +112,6 @@ export default function Services() {
                 </div>
               </div>
 
-              {/* Columns for Description - Hidden on Mobile, Visible on Desktop */}
               <div className="flex-1 hidden md:grid grid-cols-3 gap-4 text-[#232323] text-base font-medium ml-8">
                 <div className="flex flex-col">
                   <span className="text-base text-[#232323]">Lorem Ipsum</span>
@@ -142,7 +137,6 @@ export default function Services() {
                 View Details
               </button>
 
-              {/* Mobile View Details - Text Only */}
               <button className="md:hidden text-sm font-medium text-[#1814F3]">
                 View Details
               </button>

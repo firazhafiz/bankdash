@@ -12,7 +12,6 @@ export default function MyPrivileges() {
   return (
     <div className="flex flex-col gap-6 md:gap-[30px]">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-[30px]">
-        {/* Privilege Stats */}
         <div className="bg-white rounded-[25px] p-8 flex flex-col justify-center gap-6">
           <h2 className="text-[22px] font-semibold text-[#343C6A]">
             My Privilege

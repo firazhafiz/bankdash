@@ -8,9 +8,7 @@ import { DonutChart } from "../components/ui/DonutChart";
 export default function Dashboard() {
   return (
     <div className="flex flex-col gap-6 md:gap-[30px]">
-      {/* Top Row: My Cards & Recent Transaction */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-[30px]">
-        {/* My Cards (2/3 width on desktop) */}
         <div className="lg:col-span-2 flex flex-col gap-5">
           <div className="flex items-center justify-between">
             <h2 className="text-[22px] font-semibold text-[#343C6A]">
@@ -43,7 +41,6 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Recent Transaction (1/3 width) */}
         <div className="flex flex-col gap-5">
           <div className="flex items-center justify-between">
             <h2 className="text-[22px] font-semibold text-[#343C6A]">
@@ -54,7 +51,6 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* Middle Row: Weekly Activity & Expense Statistics */}
       <div className="grid grid-cols-1 lg:grid-cols-3 pb-20 gap-12 md:gap-[30px]">
         <div className="lg:col-span-2">
           <WeeklyActivityChart />
@@ -69,7 +65,6 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* Bottom Row: Quick Transfer & Balance History */}
       <div className="grid pr-0 md:pr-7 grid-cols-1 lg:grid-cols-[40%_60%] gap-6 md:gap-[30px]">
         <div>
           <QuickTransfer />

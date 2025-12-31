@@ -12,7 +12,7 @@ import { CreditCard } from "../components/ui/CreditCard";
 const iconMap: Record<string, any> = {
   "dollar-sign": DollarSign,
   income: Receipt,
-  expense: Receipt, // Using Receipt as proxy
+  expense: Receipt,
   saving: PiggyBank,
 };
 
@@ -36,7 +36,6 @@ export default function Accounts() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-[30px]">
-        {/* Recent Transactions (2/3 width) */}
         <div className="lg:col-span-2">
           <h2 className="text-[22px] font-semibold text-[#343C6A] mb-4">
             Recent Transaction
@@ -44,7 +43,6 @@ export default function Accounts() {
           <RecentTransactionList />
         </div>
 
-        {/* Credit Card (1/3 width) */}
         <div className="flex flex-col gap-5">
           <h2 className="text-[22px] font-semibold text-[#343C6A]">My Card</h2>
           <CreditCard

@@ -1,19 +1,17 @@
-import * as React from "react"
-import { ChevronDown } from "lucide-react"
-import { cn } from "../../lib/utils"
+import * as React from "react";
+import { ChevronDown } from "lucide-react";
+import { cn } from "../../lib/utils";
 
 interface SelectOption {
-  value: string
-  label: string
+  value: string;
+  label: string;
 }
 
 interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
-  options: SelectOption[]
-  placeholder?: string
+  options: SelectOption[];
+  placeholder?: string;
 }
 
-// Simple native select wrapper for robustness and accessibility without complex dependencies
-// Styling it to look custom
 const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
   ({ className, options, placeholder, ...props }, ref) => {
     return (
@@ -28,7 +26,9 @@ const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
           defaultValue=""
         >
           {placeholder && (
-             <option value="" disabled hidden>{placeholder}</option>
+            <option value="" disabled hidden>
+              {placeholder}
+            </option>
           )}
           {options.map((option) => (
             <option key={option.value} value={option.value}>
@@ -40,9 +40,9 @@ const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
           <ChevronDown className="h-4 w-4" />
         </div>
       </div>
-    )
+    );
   }
-)
-Select.displayName = "Select"
+);
+Select.displayName = "Select";
 
-export { Select }
+export { Select };

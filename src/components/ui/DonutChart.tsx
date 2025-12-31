@@ -19,12 +19,11 @@ export function DonutChart() {
               cy="50%"
               innerRadius={60}
               outerRadius={100}
-              paddingAngle={2} // Add slight padding between slices
+              paddingAngle={2}
               startAngle={90}
               endAngle={-270}
               dataKey="value"
               stroke="none"
-              // cornerRadius={10}
             >
               {data.map((entry, index) => (
                 <Cell key={`cell-${index}`} fill={entry.color} />
@@ -33,7 +32,6 @@ export function DonutChart() {
             <Tooltip />
           </PieChart>
         </ResponsiveContainer>
-        {/* Center Text (Optional based on design, design shows concentric rings maybe, simplified to simple donut for now) */}
       </div>
 
       <div className="mt-4 px-8 flex flex-wrap justify-center gap-6">

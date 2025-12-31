@@ -4,14 +4,13 @@ import { cn } from "../../lib/utils";
 
 const iconMap: Record<string, any> = {
   "credit-card": CreditCard,
-  paypal: Wallet, // Using Wallet as proxy for Paypal icon
+  paypal: Wallet,
   "dollar-sign": DollarSign,
 };
 
 export function RecentTransactionList() {
   return (
     <div className="w-full bg-white rounded-[25px] p-6 h-[250px] overflow-y-auto custom-scrollbar">
-      {/* Title removed to allow external control */}
       <div className="flex flex-col gap-4">
         {recentTransactions.map((item) => {
           const Icon = iconMap[item.icon] || DollarSign;

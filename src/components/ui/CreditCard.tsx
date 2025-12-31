@@ -34,7 +34,6 @@ export function CreditCard({
           : {}
       }
     >
-      {/* Top Section */}
       <div className="flex justify-between items-start z-10">
         <div>
           <p
@@ -69,7 +68,6 @@ export function CreditCard({
         </div>
       </div>
 
-      {/* Middle Section */}
       <div className="flex gap-16 z-10">
         <div>
           <p
@@ -95,7 +93,6 @@ export function CreditCard({
         </div>
       </div>
 
-      {/* Bottom Section */}
       <div
         className={cn(
           "flex justify-between items-center pt-4 -mx-6 -mb-6 px-6 pb-6 z-10",
@@ -108,7 +105,6 @@ export function CreditCard({
           {cardNumber}
         </p>
         <div className="flex items-center">
-          {/* Mastercard circles */}
           <div
             className={cn(
               "w-8 h-8 rounded-full z-10 -mr-4",

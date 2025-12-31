@@ -38,7 +38,6 @@ export default function Settings() {
 
         <TabsContent value="edit-profile">
           <div className="flex flex-col md:flex-row gap-[50px] mt-[40px]">
-            {/* Profile Picture */}
             <div className="flex flex-col items-center gap-4">
               <div className="relative">
                 <img
@@ -52,7 +51,6 @@ export default function Settings() {
               </div>
             </div>
 
-            {/* Form */}
             <form className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-x-[30px] gap-y-5">
               <div className="space-y-3">
                 <label className="text-base font-medium text-[#232323]">
@@ -144,7 +142,6 @@ export default function Settings() {
 
         <TabsContent value="preference">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[30px] gap-y-6 mt-8">
-            {/* Currency & Time Zone - Top Row */}
             <div className="space-y-3">
               <label className="text-base font-medium text-[#232323]">
                 Currency
@@ -169,7 +166,6 @@ export default function Settings() {
               />
             </div>
 
-            {/* Notifications Section */}
             <div className="md:col-span-2 space-y-4 mt-2">
               <h3 className="text-base font-medium text-[#343C6A] mb-4">
                 Notification

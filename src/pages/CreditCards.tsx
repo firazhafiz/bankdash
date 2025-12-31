@@ -75,7 +75,6 @@ const cardSettings = [
 export default function CreditCards() {
   return (
     <div className="flex flex-col gap-6 md:gap-[30px]">
-      {/* My Cards Section */}
       <section>
         <div className="flex items-center justify-between mb-5 px-1">
           <h2 className="text-[22px] font-semibold text-[#343C6A]">My Cards</h2>
@@ -111,9 +110,7 @@ export default function CreditCards() {
         </div>
       </section>
 
-      {/* Middle Section: Statistics & Card List */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-[30px]">
-        {/* Card Expense Statistics */}
         <div>
           <h2 className="text-[22px] font-semibold text-[#343C6A] mb-6">
             Card Expense Statistics
@@ -121,13 +118,10 @@ export default function CreditCards() {
           <div className="bg-white rounded-[25px] p-6 lg:p-[30px] flex flex-col">
             <div className="flex-1 flex items-center justify-center">
               <DonutChart />
-              {/* <p>Chart Placeholder (Build Debug)</p> */}
             </div>
           </div>
         </div>
 
-        {/* Card List */}
-        {/* Card List */}
         <div className="lg:col-span-2 flex flex-col">
           <h2 className="text-[22px] font-semibold text-[#343C6A] mb-5">
             Card List
@@ -138,9 +132,7 @@ export default function CreditCards() {
                 key={index}
                 className="flex items-center justify-between bg-white px-6 py-4 rounded-[20px]"
               >
-                {/* Mobile & Desktop: Flex Layout */}
                 <div className="flex items-center gap-4 md:gap-6 flex-1">
-                  {/* Icon */}
                   <div
                     className="flex h-[50px] w-[50px] shrink-0 items-center justify-center rounded-[12px]"
                     style={{ backgroundColor: card.iconBg }}
@@ -148,7 +140,6 @@ export default function CreditCards() {
                     <img src={card.icon} alt="Card Type" className="h-6 w-6" />
                   </div>
 
-                  {/* Card Type */}
                   <div className="flex flex-col min-w-[80px]">
                     <p className="text-[#343C6A] text-[16px] font-medium">
                       Card Type
@@ -156,7 +147,6 @@ export default function CreditCards() {
                     <p className="text-[#718EBF] text-[14px]">{card.type}</p>
                   </div>
 
-                  {/* Bank - Visible on Mobile now */}
                   <div className="flex flex-col min-w-[80px]">
                     <p className="text-[#343C6A] text-[16px] font-medium">
                       Bank
@@ -164,7 +154,6 @@ export default function CreditCards() {
                     <p className="text-[#718EBF] text-[14px]">{card.bank}</p>
                   </div>
 
-                  {/* Additional Columns for Desktop only */}
                   <div className="hidden md:flex flex-col min-w-[140px]">
                     <p className="text-[#343C6A] text-[16px] font-medium">
                       Card Number
@@ -179,7 +168,6 @@ export default function CreditCards() {
                   </div>
                 </div>
 
-                {/* View Details Button */}
                 <div className="shrink-0 ml-2">
                   <button className="text-[#1814F3] text-[13px] md:text-[15px] font-medium bg-transparent border-none p-0 whitespace-nowrap">
                     View Details
@@ -191,9 +179,7 @@ export default function CreditCards() {
         </div>
       </div>
 
-      {/* Bottom Section: Add New Card & Card Setting */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-[30px]">
-        {/* Add New Card */}
         <div className="lg:col-span-2 bg-white rounded-[25px] p-6 lg:p-[30px]">
           <h2 className="text-[22px] font-semibold text-[#343C6A] mb-6">
             Add New Card
@@ -228,7 +214,6 @@ export default function CreditCards() {
                 Expiration Date
               </label>
               <Input placeholder="25 January 2025" type="text" />
-              {/* Ideally Use Select or DatePicker, but Figma shows text/dropdown look */}
             </div>
             <div className="md:col-span-2 mt-4">
               <Button type="submit" className="w-40 h-auto text-lg">
@@ -238,7 +223,6 @@ export default function CreditCards() {
           </form>
         </div>
 
-        {/* Card Setting */}
         <div className="bg-white rounded-[25px] p-6 lg:p-[30px]">
           <h2 className="text-[22px] font-semibold text-[#343C6A] mb-6">
             Card Setting

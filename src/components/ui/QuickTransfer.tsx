@@ -13,7 +13,6 @@ export function QuickTransfer() {
         Quick Transfer
       </h2>
 
-      {/* Users Scroll */}
       <div className="flex items-center gap-4 overflow-x-auto pb-2 scrollbar-hide -mx-2 px-2">
         {quickTransferUsers.map((user, index) => (
           <div
@@ -40,7 +39,6 @@ export function QuickTransfer() {
         </button>
       </div>
 
-      {/* Amount Input */}
       <div className="flex items-center gap-4">
         <p className="text-[#718EBF] text-[15px] whitespace-nowrap">
           Write Amount

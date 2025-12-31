@@ -40,7 +40,7 @@ const myInvestments = [
     icon: Play,
     bg: "#E7EDFF",
     color: "#396AFF",
-  }, // Using Play as placeholder
+  },
   {
     name: "Tesla Motors",
     desc: "Electric Vehicles",
@@ -55,7 +55,6 @@ const myInvestments = [
 export default function Investments() {
   return (
     <div className="flex flex-col gap-6 md:gap-[30px]">
-      {/* Top Stats */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-[30px]">
         {investmentStats.map((item, index) => {
           const Icon = iconMap[item.icon];
@@ -83,9 +82,7 @@ export default function Investments() {
         })}
       </div>
 
-      {/* Charts Row */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-[30px]">
-        {/* Yearly Investment (Line Chart) */}
         <div className="bg-white rounded-[25px] p-6 h-[350px]">
           <h2 className="text-[22px] font-semibold text-[#343C6A] mb-6">
             Yearly Total Investment
@@ -121,7 +118,6 @@ export default function Investments() {
           </ResponsiveContainer>
         </div>
 
-        {/* Monthly Revenue (Area Chart) */}
         <div className="bg-white rounded-[25px] p-6 h-[350px]">
           <h2 className="text-[22px] font-semibold text-[#343C6A] mb-6">
             Monthly Revenue
@@ -159,7 +155,6 @@ export default function Investments() {
         </div>
       </div>
 
-      {/* My Investment List */}
       <div className="bg-white rounded-[25px] p-6 lg:p-[30px]">
         <h2 className="text-[22px] font-semibold text-[#343C6A] mb-6">
           My Investment
